@@ -1,0 +1,8 @@
+{ "name": "sql-migrate"
+, "version": "0.0.0"
+, "main": "migrate.js"
+, "dependencies": { "pg": "0.6.x"
+                  , "async": "0.1.x"
+                  , "optimist": "0.3.x"
+                  }
+}
