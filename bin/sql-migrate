@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var command = process.argv[2]
+  , args = process.argv.slice(3)
+
+var end = function(err) {
+  if(err) {
+    console.log('Usage: sql-migrate OPTION\n'
+               +'  create <description>\n'
+               +'  upgrade\n'
+               +'  downgrade\n')
+    console.log('Error:', err);
+    process.exit(-1);
+  } else {
+    process.exit(0);
+  }
+}
+
+console.log(process.argv, command, args)
+
+switch(command) {
+  case 'create':
+    require('../create')(args, end);
+    break;
+  case 'upgrade':
+    require('../upgrade')(end);
+    break;
+  case 'downgrade':
+    require('../downgrade')(end);;
+    break;
+  default:
+    end('Unknown command.');
+    break;
+}
+
