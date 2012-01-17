@@ -9,24 +9,22 @@ var end = function(err) {
                +'  create <description>\n'
                +'  upgrade\n'
                +'  downgrade\n')
-    console.log('Error:', err);
+    console.log('\nError:', err);
     process.exit(-1);
   } else {
     process.exit(0);
   }
 }
 
-console.log(process.argv, command, args)
-
 switch(command) {
   case 'create':
-    require('../create')(args, end);
+    require('../lib/create')(args, end);
     break;
   case 'upgrade':
-    require('../upgrade')(end);
+    require('../lib/upgrade')(end);
     break;
   case 'downgrade':
-    require('../downgrade')(end);;
+    require('../lib/downgrade')(end);;
     break;
   default:
     end('Unknown command.');

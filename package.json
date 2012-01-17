@@ -1,8 +1,23 @@
-{ "name": "sql-migrate"
-, "version": "0.0.0"
-, "main": "migrate.js"
-, "dependencies": { "pg": "0.6.x"
-                  , "async": "0.1.x"
-                  , "optimist": "0.3.x"
-                  }
+{
+  "name": "plain-migrate",
+  "version": "0.1.0",
+  "description": "Migrate your schema and data using SQL or Javascript.",
+  "keywords": [ "schema", "migration", "migrate", "database", "sql"],
+  "author": "uu1101 <uu1101@gmail.com>",
+  "contributors": [
+    { "name": "uu1101", "email": "uu1101@gmail.com" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uu1101/plain-migrate.git"
+  },
+  "main": "./lib/migrations.js",
+  "bin": {
+    "plain-migrate": "./bin/plain-migrate"
+  },
+  "dependencies": {
+    "pg": "0.6.x",
+    "async": "0.1.x",
+  },
+  "engines": { "node": "0.6.x" }
 }
