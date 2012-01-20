@@ -1,7 +1,8 @@
-# Attention: PostgreSQL only
+# plain-migrate
 
-`plain-migrate` only works with PostgreSQL and depends on the `pg` package.
-Please, fill an issue if you need support for other databases.
+Plain migrate helps you organizing, applying and reverting changes to your
+database schema. Its main distinctive is it being DSL-free: you can use plain
+SQL for your migrations, and fall back to Javascript when needed.
 
 # Setup
 
@@ -139,4 +140,9 @@ functions, so it's easy to run accompanying SQL scripts `up.sql` and
 `this.downgrade_sql(callback)`); and querying the database,
 `this.execute(sql_string, [values], callback)` (see `pg` package's
 documentation for further information).
+
+# Attention: PostgreSQL only
+
+`plain-migrate` only works with PostgreSQL and depends on the `pg` package.
+Please, fill an issue if you need support for other databases.
 
