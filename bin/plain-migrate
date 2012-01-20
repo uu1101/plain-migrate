@@ -5,7 +5,7 @@ var command = process.argv[2]
 
 var end = function(err) {
   if(err) {
-    console.log('Usage: sql-migrate COMMAND\n'
+    console.log('Usage: plain-migrate COMMAND\n'
                +'Where COMMAND is one of:\n'
                +'  create <description>   Create a new migration.\n'
                +'  upgrade                Run every pending migration.\n'
