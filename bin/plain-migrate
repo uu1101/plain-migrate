@@ -5,11 +5,12 @@ var command = process.argv[2]
 
 var end = function(err) {
   if(err) {
-    console.log('Usage: sql-migrate OPTION\n'
-               +'  create <description>\n'
-               +'  upgrade\n'
-               +'  downgrade\n')
-    console.log('\nError:', err);
+    console.log('Usage: sql-migrate COMMAND\n'
+               +'Where COMMAND is one of:\n'
+               +'  create <description>   Create a new migration.\n'
+               +'  upgrade                Run every pending migration.\n'
+               +'  downgrade              Revert last applied migration.\n')
+    console.log('Error:', err);
     process.exit(-1);
   } else {
     process.exit(0);
