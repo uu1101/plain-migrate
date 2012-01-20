@@ -1,6 +1,6 @@
 {
   "name": "plain-migrate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Migrate your schema and data using SQL or Javascript.",
   "keywords": [ "schema", "migration", "migrate", "database", "sql"],
   "author": "uu1101 <uu1101@gmail.com>",
