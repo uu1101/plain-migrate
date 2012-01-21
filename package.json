@@ -1,6 +1,6 @@
 {
   "name": "plain-migrate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Migrate your schema and data using SQL or Javascript.",
   "keywords": [ "schema", "migration", "migrate", "database", "sql"],
   "author": "uu1101 <uu1101@gmail.com>",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "pg": "0.6.x",
-    "async": "0.1.x",
+    "async": "0.1.x"
   },
   "engines": { "node": "0.6.x" }
 }
